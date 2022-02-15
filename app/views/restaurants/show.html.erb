@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @restaurant.name %> (<%= "*" * @restaurant.stars %>)</h1>
+  <p><%= @restaurant.address %></p>
+
+  <%= link_to 'Back to restaurants', restaurants_path  %> |
+  <%= link_to 'edit', edit_restaurant_path(@restaurant) %> |
+  <%= link_to 'Supprimer', restaurant_path(@restaurant), method: :delete, data: { confirm: "Are you sure?" }   %>
+</div>
